@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0E86D4"
+        android:id="@+id/toolbar">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ParkManage"
+            android:layout_gravity="center"
+            android:layout_marginTop="-45dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:fontFamily="@font/p2"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/background"
+        android:layout_marginTop="-50dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome !"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="-137sp"
+        android:textSize="28sp"
+        android:fontFamily="@font/p2"
+        android:textStyle="bold"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="118dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/button_1"
+        android:text="Add"
+        android:textStyle="bold"
+        android:id="@+id/Button_1"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="118dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="235dp"
+        android:layout_marginTop="-51dp"
+        android:background="@drawable/button_1"
+        android:text="remove"
+        android:textStyle="bold"
+        android:id="@+id/Button_2"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="118dp"
+        android:layout_height="51dp"
+        android:background="@drawable/button_1"
+        android:layout_gravity="center"
+        android:layout_marginTop="55dp"
+        android:text="Quit"
+        android:id="@+id/Button_3"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="171dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/p1"
+            android:text="powered by Nobody"
+            android:textColor="#00BCD4"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</LinearLayout>
