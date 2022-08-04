@@ -25,6 +25,7 @@ public class Add extends AppCompatActivity {
     AppCompatRadioButton car_btn , bike_btn;
     RadioGroup radioGroup;
     String vehicle;
+    Integer ids = 0;
 
     @SuppressLint("WrongViewCast")
 
@@ -58,9 +59,11 @@ public class Add extends AppCompatActivity {
                    vehicle="bike";
                 }
                 vehcle.setVehicle(vehicle);
-                Toast.makeText(getApplicationContext(),"Add Completed",Toast.LENGTH_LONG).show();
+                parkDBAdopter.addVehicle(vehcle);
 
-                parkDBAdopter.addVehcle(vehcle);
+
+                String react = "Add Completed ";
+                Toast.makeText(getApplicationContext(),react ,Toast.LENGTH_LONG).show();
                 finish();
             }
         });

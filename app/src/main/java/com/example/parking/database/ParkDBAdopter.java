@@ -19,13 +19,13 @@ public class ParkDBAdopter extends ParkDatabase{
         super(context);
     }
 
-    public long addVehcle (Vehcle vehcle){
+    public long addVehicle (Vehcle vehicle){
 
         SQLiteDatabase db = getWritableDatabase();
         ContentValues contentValues=new ContentValues();
-        contentValues.put("ID",vehcle.getId());
-        contentValues.put("Vehcle",vehcle.getVehicle());
-        contentValues.put("enterTime",vehcle.getEntryTime());
+        //contentValues.put("id",vehicle.getId());
+        contentValues.put("vehicle",vehicle.getVehicle());
+        contentValues.put("entryTime",vehicle.getEntryTime());
 
 
        return db.insert("tbl_parking",null,contentValues);
@@ -33,13 +33,13 @@ public class ParkDBAdopter extends ParkDatabase{
 
     }
 
-    public List<String> showPark(){
+    public List<Integer> showPark(){
 
         SQLiteDatabase db = getReadableDatabase();
 
         Cursor cursor = db.rawQuery("select * from tbl_parking", null);
 
-        List<String> parkList = new ArrayList<>();
+        List<Integer> parkListID = new ArrayList<>();
 
         while (cursor.moveToNext()){
 
@@ -47,13 +47,13 @@ public class ParkDBAdopter extends ParkDatabase{
             String vehicle = cursor.getString(1);
             String enterTime = cursor.getString(2);
 
-            parkList.add(vehicle);
+            parkListID.add(id);
 
 
 
         }
 
-        return parkList;
+        return parkListID;
 
     }
 }

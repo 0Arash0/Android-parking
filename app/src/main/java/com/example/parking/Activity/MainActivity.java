@@ -57,8 +57,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        List<String> parkList = parkDBAdopter.showPark();
-
     }
 }

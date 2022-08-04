@@ -3,17 +3,17 @@ package com.example.parking.model;
 
 public class Vehcle {
 
-    private int id;
+    //private int id;
     private String vehicle;
     private String entryTime;
 
-    public int getId() {
+    /*public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
+    }*/
 
     public String getVehicle() {
         return vehicle;

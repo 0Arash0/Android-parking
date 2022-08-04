@@ -39,31 +39,32 @@
     </Toolbar>
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/getid"
+        android:id="@+id/getID"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
         android:layout_marginTop="-250dp"
         android:backgroundTint="@color/white"
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
-        android:text="enter car id"
+        android:hint="Enter car ID"
+        android:textColorHint="#FFFFFF"
         android:textColor="#FFFFFF"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/exitH"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/getid"
+        android:layout_below="@id/getID"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:backgroundTint="@color/white"
         android:gravity="center"
-        android:text="exit hour"
+        android:hint="Exit hour"
+        android:textColorHint="#FFFFFF"
         android:textColor="#FFFFFF"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="100dp"
@@ -72,7 +73,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_1"
-        android:text="remove" />
+        android:id="@+id/btn_remove"
+        android:text="Remove" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
@@ -80,8 +82,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/p1"
-        android:text="powered by Nobody"
         android:textColor="@color/white"
+        android:id="@+id/test"
+        android:text="powered by Nobody"
         android:textStyle="bold" />
 
 </RelativeLayout>
