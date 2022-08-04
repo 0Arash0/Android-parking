@@ -24,6 +24,7 @@ public class Add extends AppCompatActivity {
     AppCompatEditText edt_time;
     AppCompatRadioButton car_btn , bike_btn;
     RadioGroup radioGroup;
+    String vehicle;
 
     @SuppressLint("WrongViewCast")
 
@@ -34,28 +35,33 @@ public class Add extends AppCompatActivity {
 
         edt_time=findViewById(R.id.edt_time);
         car_btn=findViewById(R.id.car_btn);
-       bike_btn=findViewById(R.id.bike_btn);
+        bike_btn=findViewById(R.id.bike_btn);
         radioGroup=findViewById(R.id.grp_btn);
+        btn_add=findViewById(R.id.btn_add);
 
         parkDBAdopter = new ParkDBAdopter(getApplicationContext());
-         String radio = ((RadioButton)findViewById(radioGroup.getCheckedRadioButtonId())).getText().toString();
 
-       radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                Toast.makeText(getBaseContext(),radio,Toast.LENGTH_LONG).show();
-            }
-        });
 
-        btn_add.setOnClickListener(new View.OnClickListener() {
+      btn_add.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                String time = edt_time.getText().toString();
                 Vehcle vehcle=new Vehcle();
+                String time = edt_time.getText().toString();
                 vehcle.setEntryTime(time);
+                if(car_btn.isChecked()){
+
+                    vehicle ="car";
+                }
+               else if(bike_btn.isChecked()){
+
+                   vehicle="bike";
+                }
+                vehcle.setVehicle(vehicle);
+                Toast.makeText(getApplicationContext(),"Add Completed",Toast.LENGTH_LONG).show();
 
                 parkDBAdopter.addVehcle(vehcle);
+                finish();
             }
         });
 

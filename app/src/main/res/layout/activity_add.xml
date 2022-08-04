@@ -15,6 +15,7 @@
         android:layout_marginTop="320dp"
         android:gravity="center"
         android:hint="Enter time"
+        android:inputType="datetime"
         android:textColor="#00BCD4" />
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -111,6 +112,7 @@
         android:textStyle="bold" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_add"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/grp_btn"
@@ -121,8 +123,7 @@
         android:layout_marginBottom="20dp"
         android:background="@drawable/button_1"
         android:text="Add"
-        android:textStyle="bold"
-        android:id="@+id/btn_add"/>
+        android:textStyle="bold" />
 
 
 </RelativeLayout>
