@@ -11,9 +11,13 @@ import com.example.parking.R;
 import com.example.parking.database.ParkDBAdopter;
 import com.example.parking.database.ParkDatabase;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     ParkDatabase parkDatabase;
+    ParkDBAdopter parkDBAdopter;
     AppCompatButton Button_1;
     AppCompatButton Button_2;
     AppCompatButton Button_3;
@@ -21,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         parkDatabase = new ParkDatabase(this);
+        parkDBAdopter = new ParkDBAdopter(getApplicationContext());
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -51,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
+        List<String> parkList = parkDBAdopter.showPark();
 
     }
 }
