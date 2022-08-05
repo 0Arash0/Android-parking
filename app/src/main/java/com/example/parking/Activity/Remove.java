@@ -29,6 +29,7 @@ public class Remove extends AppCompatActivity {
     AppCompatEditText edt_exitHour;
     AppCompatButton btn_remove;
     AppCompatImageView back;
+    Integer remove = 0;
 
 
     @Override
@@ -69,6 +70,7 @@ public class Remove extends AppCompatActivity {
 
         List<String> vehicleList = parkDBAdopter.showParkVehicle();
         List<String> timeList = parkDBAdopter.showParkTime();
+        List<Integer> lastID = parkDBAdopter.showParkID();
 
         btn_remove.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,10 +127,14 @@ public class Remove extends AppCompatActivity {
 
                 Integer deleteRow = parkDBAdopter.remove(edt_id.getText().toString());
 
-                if(deleteRow > 0)
-                    Toast.makeText(getApplicationContext(),"Remove Completed",Toast.LENGTH_LONG).show();
+                if(deleteRow > 0) {
+                    Toast.makeText(getApplicationContext(), "Remove Completed", Toast.LENGTH_LONG).show();
+                }
                 else
                     Toast.makeText(getApplicationContext(),"Remove UnCompleted",Toast.LENGTH_LONG).show();
+
+                /*for(int i=Integer.parseInt(edt_id.getText().toString()); i<lastID.get(lastID.size()-1) ; i++)
+                    lastID.set(i,lastID.get(i)-1);*/
 
 
             }

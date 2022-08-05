@@ -78,7 +78,7 @@ public class Add extends AppCompatActivity {
                 vehcle.setEntryTime(time);
 
                 if(car_btn.isChecked()==false&&bike_btn.isChecked()==false) {
-                    Toast.makeText(getApplicationContext(),"didnt choose!!",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"didn't choose!!",Toast.LENGTH_LONG).show();
                     return;
                 }
                 if(edt_time.getText().length()==0) {

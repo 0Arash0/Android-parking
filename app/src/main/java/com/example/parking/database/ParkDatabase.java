@@ -18,7 +18,7 @@ public class ParkDatabase extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String query = "create table tbl_parking(id Integer PRIMARY KEY autoincrement, vehicle varchar(100), " + "entryTime Text)" ;
+        String query = "create table tbl_parking(id Integer PRIMARY KEY AUTOINCREMENT, vehicle varchar(100), " + "entryTime Text)" ;
         db.execSQL(query);
     }
 

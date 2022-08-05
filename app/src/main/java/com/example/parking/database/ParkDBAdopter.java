@@ -5,8 +5,10 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Pair;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 
 import com.example.parking.model.Vehcle;
 
@@ -16,23 +18,25 @@ import java.util.List;
 
 public class ParkDBAdopter extends ParkDatabase{
 
+
     public final static String KEY_ID = "_id";
 
     public ParkDBAdopter(@Nullable Context context) {
         super(context);
     }
 
-    public long addVehicle (Vehcle vehicle){
+    public boolean addVehicle (Vehcle vehicle){
 
         SQLiteDatabase db = getWritableDatabase();
         ContentValues contentValues=new ContentValues();
-        //contentValues.put("id",vehicle.getId());
         contentValues.put("vehicle",vehicle.getVehicle());
         contentValues.put("entryTime",vehicle.getEntryTime());
 
-
-       return db.insert("tbl_parking",null,contentValues);
-
+        long result =db.insert("tbl_parking",null,contentValues);
+        if (result == -1)
+            return false;
+        else
+            return true;
 
     }
 
