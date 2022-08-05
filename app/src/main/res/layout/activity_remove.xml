@@ -31,6 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:tint="@color/white"
+                android:id="@+id/back_home"
                 app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
         </RelativeLayout>
@@ -48,8 +49,9 @@
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:hint="Enter car ID"
-        android:textColorHint="#FFFFFF"
         android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:inputType="number"
         android:textSize="20sp" />
 
     <androidx.appcompat.widget.AppCompatEditText
@@ -62,18 +64,19 @@
         android:backgroundTint="@color/white"
         android:gravity="center"
         android:hint="Exit hour"
-        android:textColorHint="#FFFFFF"
         android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:inputType="number"
         android:textSize="20sp" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_remove"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/exitH"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_1"
-        android:id="@+id/btn_remove"
         android:text="Remove" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -83,7 +86,6 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/p1"
         android:textColor="@color/white"
-        android:id="@+id/test"
         android:text="powered by Nobody"
         android:textStyle="bold" />
 

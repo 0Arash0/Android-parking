@@ -2,6 +2,7 @@ package com.example.parking.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatTextView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     AppCompatButton Button_1;
     AppCompatButton Button_2;
     AppCompatButton Button_3;
+    AppCompatTextView txt_id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         Button_1 = findViewById(R.id.Button_1);
         Button_2 = findViewById(R.id.Button_2);
         Button_3 = findViewById(R.id.Button_3);
+
 
         Button_1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,4 +61,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 }
