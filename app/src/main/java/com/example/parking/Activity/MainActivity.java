@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         Button_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onDestroy();
+                finishAffinity();
             }
         });
 
