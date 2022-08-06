@@ -9,6 +9,7 @@ import androidx.appcompat.widget.AppCompatRadioButton;
 import androidx.viewpager.widget.PagerAdapter;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
@@ -61,6 +62,12 @@ public class Add extends AppCompatActivity {
         builder.setCancelable(true);
         builder.setTitle(title);
         builder.setMessage(Message);
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
         builder.show();
     }
 
