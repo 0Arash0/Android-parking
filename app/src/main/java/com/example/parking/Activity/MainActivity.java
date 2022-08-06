@@ -1,12 +1,16 @@
 package com.example.parking.Activity;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatTextView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.parking.R;
 import com.example.parking.database.ParkDBAdopter;
@@ -22,7 +26,9 @@ public class MainActivity extends AppCompatActivity {
     AppCompatButton Button_1;
     AppCompatButton Button_2;
     AppCompatButton Button_3;
-    AppCompatTextView txt_id;
+    AppCompatButton Button_view;
+    List<Integer> allIDs ;
+    List<String> allVehicle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         Button_1 = findViewById(R.id.Button_1);
         Button_2 = findViewById(R.id.Button_2);
         Button_3 = findViewById(R.id.Button_3);
+        Button_view = findViewById(R.id.Button_view);
 
 
         Button_1.setOnClickListener(new View.OnClickListener() {
@@ -62,4 +69,37 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void showMessage(String Message){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle("View All Data");
+        builder.setMessage(Message);
+        builder.setCancelable(true);
+        builder.setPositiveButton("OK", null);
+        builder.show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        allIDs = parkDBAdopter.showParkID();
+        allVehicle = parkDBAdopter.showParkVehicle();
+
+        Button_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                StringBuffer buffer = new StringBuffer();
+                for (int i=0;i<=allIDs.indexOf(allIDs.get(allIDs.size()-1));i++){
+                    buffer.append("ID : " + allIDs.get(i) + "\n");
+                    buffer.append("Vehicle : " + allVehicle.get(i) + "\n");
+                    buffer.append("\n");
+
+                }
+                showMessage(buffer.toString());
+
+            }
+        });
+    }
 }

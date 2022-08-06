@@ -42,7 +42,6 @@ public class Remove extends AppCompatActivity {
 
         parkDatabase = new ParkDatabase(this);
         parkDBAdopter = new ParkDBAdopter(getApplicationContext());
-        listOfAllID = parkDBAdopter.showParkID();
 
         edt_id = findViewById(R.id.getID);
         edt_exitHour = findViewById(R.id.exitH);
@@ -90,6 +89,7 @@ public class Remove extends AppCompatActivity {
 
         List<String> vehicleList = parkDBAdopter.showParkVehicle();
         List<String> timeList = parkDBAdopter.showParkTime();
+        listOfAllID = parkDBAdopter.showParkID();
 
         btn_remove.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,14 +97,12 @@ public class Remove extends AppCompatActivity {
 
                 /*Integer id = Integer.parseInt(edt_id.getText().toString());
                 id = id-1;*/
-                Log.e("First","Test");
                 idDelete = (listOfAllID.indexOf(Integer.parseInt(edt_id.getText().toString()))+1);
                 String vehicle = vehicleList.get(idDelete-1);
                 Integer cost=0;
-                Log.e("","");
 
 
-                /*if(edt_exitHour.getText().length()==0&&edt_id.getText().length()==0) {
+                if(edt_exitHour.getText().length()==0&&edt_id.getText().length()==0) {
                     Toast.makeText(getApplicationContext(),"Please Enter!",Toast.LENGTH_LONG).show();
                     return;
                 }
@@ -117,7 +115,7 @@ public class Remove extends AppCompatActivity {
                 if(edt_id.getText().length()==0) {
                     Toast.makeText(getApplicationContext(),"enter ID!",Toast.LENGTH_LONG).show();
                     return;
-                }*/
+                }
                 if(vehicle.equals("car")){
 
                     Integer exit = Integer.parseInt(edt_exitHour.getText().toString());
@@ -145,8 +143,6 @@ public class Remove extends AppCompatActivity {
                 buffer.append("ExitTime: " + edt_exitHour.getText().toString() + "\n");
                 buffer.append("SoratHesab: " + cost/10 + " Toman " );
                 showMessage("Delete Data", buffer.toString());
-
-
 
 
             }

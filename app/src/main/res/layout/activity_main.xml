@@ -62,14 +62,26 @@
         android:textStyle="bold"
         android:id="@+id/Button_2"/>
 
+
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="118dp"
         android:layout_height="51dp"
         android:background="@drawable/button_1"
         android:layout_gravity="center"
         android:layout_marginTop="55dp"
+        android:layout_marginRight="107dp"
         android:text="Quit"
         android:id="@+id/Button_3"
+        android:textStyle="bold"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="118dp"
+        android:layout_height="51dp"
+        android:background="@drawable/button_1"
+        android:layout_marginTop="-52dp"
+        android:layout_marginLeft="237dp"
+        android:text="ViewData"
+        android:id="@+id/Button_view"
         android:textStyle="bold"/>
 
     <RelativeLayout
