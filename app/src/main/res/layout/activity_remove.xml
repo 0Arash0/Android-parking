@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.MainActivity"
-    android:background="#04D4F0">
+    tools:context=".Activity.MainActivity">
 
     <Toolbar
         android:layout_width="match_parent"
@@ -39,18 +38,21 @@
 
     </Toolbar>
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5"
+        android:src="@drawable/background" />
+
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/getID"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginTop="-250dp"
-        android:backgroundTint="@color/white"
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:hint="Enter car ID"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
         android:inputType="number"
         android:textSize="20sp" />
 
@@ -61,11 +63,8 @@
         android:layout_below="@id/getID"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:backgroundTint="@color/white"
         android:gravity="center"
         android:hint="Exit hour"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
         android:inputType="number"
         android:textSize="20sp" />
 
@@ -85,8 +84,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/p1"
-        android:textColor="@color/white"
         android:text="powered by Nobody"
+        android:textColor="#00BCD4"
         android:textStyle="bold" />
 
 </RelativeLayout>
