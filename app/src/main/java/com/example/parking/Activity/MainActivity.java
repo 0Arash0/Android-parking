@@ -97,9 +97,12 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 StringBuffer buffer = new StringBuffer();
-                for (int i=0;i<=allIDs.indexOf(allIDs.get(allIDs.size()-1));i++){
+                for (int i =0 ; i<=allIDs.indexOf(allIDs.get(allIDs.size()-1)) ; i++){
+                    int z=i;
+                    z++;
                     buffer.append("ID : " + allIDs.get(i) + "\n");
                     buffer.append("Vehicle : " + allVehicle.get(i) + "\n");
+                    buffer.append("Row : " + z + "\n");
                     buffer.append("\n");
 
                 }
