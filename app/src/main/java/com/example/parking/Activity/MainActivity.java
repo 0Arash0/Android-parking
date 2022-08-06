@@ -90,6 +90,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if(allIDs.size()==0)
+                {
+                    Toast.makeText(MainActivity.this, "NO Data", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 StringBuffer buffer = new StringBuffer();
                 for (int i=0;i<=allIDs.indexOf(allIDs.get(allIDs.size()-1));i++){
                     buffer.append("ID : " + allIDs.get(i) + "\n");

@@ -96,9 +96,9 @@
         android:textStyle="bold"/>
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="match_parent"
-        android:layout_height="285dp"
-        android:layout_marginTop="55dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:src="@drawable/background" />
 
     <androidx.appcompat.widget.AppCompatTextView
