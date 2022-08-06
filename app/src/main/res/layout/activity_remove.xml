@@ -41,7 +41,7 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5"
+        android:layout_marginTop="5dp"
         android:src="@drawable/background" />
 
     <androidx.appcompat.widget.AppCompatEditText
