@@ -140,8 +140,6 @@ public class Remove extends AppCompatActivity {
                 buffer.append("EntryTime: " + timeList.get(idDelete) + "\n");
                 buffer.append("ExitTime: " + edt_exitHour.getText().toString() + "\n");
                 buffer.append("SoratHesab: " + cost/10 + " Toman " + "\n" );
-                //idDelete++;
-                //buffer.append("idDelete: " + idDelete + "\n" ) ;
                 showMessage("Delete Data", buffer.toString());
 
 
