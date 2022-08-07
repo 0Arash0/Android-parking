@@ -94,12 +94,12 @@ public class ParkDBAdopter extends ParkDatabase{
     }
 
 
-    public Integer remove(String id){
+    /*public Integer remove(String id){
         
         SQLiteDatabase database = getWritableDatabase();
         return database.delete("tbl_parking", "ID = ?", new String[] {id});
 
 
-    }
+    }*/
 
 }

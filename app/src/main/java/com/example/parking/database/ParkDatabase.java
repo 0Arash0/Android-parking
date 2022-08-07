@@ -26,4 +26,13 @@ public class ParkDatabase extends SQLiteOpenHelper{
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
 
     }
+
+    public Integer remove(String id){
+
+        SQLiteDatabase database = this.getWritableDatabase();
+        Integer returnType = database.delete("tbl_parking", "ID = ?", new String[] {id});
+        return returnType;
+
+
+    }
 }

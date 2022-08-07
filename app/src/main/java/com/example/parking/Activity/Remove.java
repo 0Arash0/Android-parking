@@ -68,9 +68,8 @@ public class Remove extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Log.e("First","Test");
-                idDelete++;
-                String deleteID = idDelete.toString();
-                Integer deleteRow = parkDBAdopter.remove(deleteID);
+                String deleteID = edt_id.getText().toString();
+                Integer deleteRow = parkDatabase.remove(deleteID);
                 if(deleteRow > 0) {
                     Toast.makeText(getApplicationContext(), "Remove Completed", Toast.LENGTH_LONG).show();
                     idDelete = 0;
@@ -141,9 +140,8 @@ public class Remove extends AppCompatActivity {
                 buffer.append("EntryTime: " + timeList.get(idDelete) + "\n");
                 buffer.append("ExitTime: " + edt_exitHour.getText().toString() + "\n");
                 buffer.append("SoratHesab: " + cost/10 + " Toman " + "\n" );
-                idDelete++;
-                buffer.append("idDelete: " + idDelete + "\n" ) ;
-                idDelete--;
+                //idDelete++;
+                //buffer.append("idDelete: " + idDelete + "\n" ) ;
                 showMessage("Delete Data", buffer.toString());
 
 
