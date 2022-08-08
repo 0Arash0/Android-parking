@@ -15,9 +15,7 @@ import com.example.parking.model.Vehcle;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class ParkDBAdopter extends ParkDatabase{
-
 
     public final static String KEY_ID = "_id";
 
@@ -37,26 +35,21 @@ public class ParkDBAdopter extends ParkDatabase{
             return false;
         else
             return true;
-
     }
 
     public List<Integer> showParkID(){
 
         SQLiteDatabase db = getReadableDatabase();
-
         Cursor cursor = db.rawQuery("select * from tbl_parking", null);
-
         List<Integer> parkListID = new ArrayList<>();
 
         while (cursor.moveToNext()) {
 
             int id = cursor.getInt(0);
             parkListID.add(id);
-
         }
         return parkListID;
     }
-
 
    public List<String> showParkVehicle(){
 
@@ -75,7 +68,6 @@ public class ParkDBAdopter extends ParkDatabase{
         return parkListVehicle;
     }
 
-
     public List<String> showParkTime(){
 
         SQLiteDatabase db = getReadableDatabase();
@@ -93,13 +85,5 @@ public class ParkDBAdopter extends ParkDatabase{
         return parkListTime;
     }
 
-
-    /*public Integer remove(String id){
-        
-        SQLiteDatabase database = getWritableDatabase();
-        return database.delete("tbl_parking", "ID = ?", new String[] {id});
-
-
-    }*/
 
 }

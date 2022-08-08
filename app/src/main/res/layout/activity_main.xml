@@ -69,7 +69,7 @@
         android:background="@drawable/button_1"
         android:layout_gravity="center"
         android:layout_marginTop="55dp"
-        android:layout_marginRight="107dp"
+        android:layout_marginRight="100dp"
         android:text="Quit"
         android:id="@+id/Button_3"
         android:textStyle="bold"/>
